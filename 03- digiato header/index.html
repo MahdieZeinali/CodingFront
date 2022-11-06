@@ -4,82 +4,138 @@
     <title>دیجیاتو - هر لحظه با اخبار فناوری</title>
 
     <style>
+        /*============
+        first step
+        ============*/
 
         body {
             direction: rtl;
             margin: 0;
-            color: #6a7196;
+            /* color: #6a7196; */
         }
+
         ul, li {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+
         #header ul li a {
             text-decoration: none;
         }
+
+
+
+        
+        /*============
+        Top section
+        ============*/
+
         .container {
             width: 1470px;
             margin: 0 auto;
         }
+
         .overflow-hidden {
             overflow: hidden;
+        }
+
+        #header .top {
+            background: #f7f9fd;
+            padding: 24px 0 24px 0;
+        }
+
+        #header .top .logo {
+            float: right;
         }
 
         #header .top .logo img {
             width: 142px;
             height: 60px;
         } 
-        #header .top {
-            background: #f7f9fd;
-            padding: 24px 0 24px 0;
-        }
-        #header .top .logo {
-            float: right;
-        }
+
         #header .top .icons {
             float: left;
         }
-        #header .top .icons ul li {
-            float: right;
-        }
+
         #header .top .icons ul {
             padding: 24px 0px;
         }
+
+        #header .top .icons ul li {
+            float: right;
+        }
+
         #header .top .icons ul li a {
             text-decoration: none;
             color: #6a7196;
             display: block;
-            padding: 0px 10px;
+            padding: 0px 14px;
         }
+
         #header .top .icons ul li a:hover {
             color: black;
         }
 
+        /*از طریق border هم می‌شد ولی فکرکنم اگه کله‌اش می‌خواست گرد بشه از اون طریق داستان درست می‌شد*/
+        #header .top .icons ul li.verticalline { 
+            width: 2px;
+            height: 21px;
+            background: #d8dae4;
+        }
+
+        #header .top .icons ul li a.search-icon {
+            padding: 0;
+        }
+
+
+
+
+        /*============
+        bottom section
+        ============*/
+
         #header .bottom {
             background: #f0f4fc;
+            padding: 24px 0;
         }
+
         #header .bottom .menu {
             float: right;
         }
+
         #header .bottom .popular {
             float: left;
         }
+
         #header .bottom .menu ul li {
             float: right;
         }
+
         #header .bottom .popular ul li {
             float: right;
         }
-        #header .bottom ul li a {
+
+        #header .bottom .menu ul li a {
             padding: 0 20px;
+            color: #6a7196;
         }
-        #header .bottom {
-            padding: 24px 0;
+
+        #header .bottom .menu ul li a.firstchild {
+            padding: 0 0 0 20px;
         }
-        .verticalline {
-            border-left: 2px solid #d8dae4;
-            padding: 0 20px;
+
+        #header .bottom .popular ul li a {
+            padding: 0 0 0 24px;
+            color: #a0a4bc;
+        }
+
+        #header .bottom .popular ul li a.lastchild {
+            padding: 0;
+        }
+
+        #header .bottom .popular ul li.popfirstchild {
+            margin: 0 0 0 24px;
         }
 
     </style>
@@ -97,10 +153,11 @@
         
         
                 <div class="icons">
-                    <ul>
-                        <li><a href="#" class="verticalline">تم</a></li>
+                    <ul class="overflow-hidden">
+                        <li><a href="#">تم</a></li>
+                        <li class="verticalline"></li>
                         <li><a href="#">پروفایل</a></li>
-                        <li><a href="#">سرچ</a></li>
+                        <li><a href="#" class="search-icon">سرچ</a></li>
                     </ul>
                 </div>
             </div>
@@ -110,8 +167,8 @@
         <div class="bottom">
             <div class="container overflow-hidden">   
                     <div class="menu">
-                        <ul>
-                            <li><a href="#">تکنولوژی</a></li>
+                        <ul class="overflow-hidden">
+                            <li><a href="#" class="firstchild">تکنولوژی</a></li>
                             <li><a href="#">خودرو</a></li>
                             <li><a href="#">نقد و بررسی</a></li>
                             <li><a href="#">ویدیو</a></li>
@@ -124,15 +181,13 @@
                     </div>
         
                     <div class="popular">
-                        <ul>
-                            <li>پرطرفدارها:</li>
+                        <ul class="overflow-hidden">
+                            <li class="popfirstchild">پرطرفدارها:</li>
                             <li><a href="#">سامسونگ</a></li>
                             <li><a href="#">محصولات 2022 اپل</a></li>
-                            <li><a href="#">استارلینک</a></li>
+                            <li><a href="#" class="lastchild">استارلینک</a></li>
                         </ul>
                     </div>
-                </div>
-        
             </div>
         </div>
 
