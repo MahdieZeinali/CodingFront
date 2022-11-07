@@ -28,11 +28,94 @@
 
 
             /*============
+            all sections
+            ============*/
+
+            .overflow-hidden {
+                overflow: hidden;
+            }
+
+            .container {
+                width: 1676;
+                margin: 0 auto;
+            }
+
+            .float-right {
+                float: right;
+            }
+
+
+            /*============
             Top section
             ============*/
+
             #header .top {
                 background: #fff;
+                padding: 12px 16px;
             }
+
+            #header .top .left {
+                float: left;
+            }
+
+            #header .top li {
+                float: right;
+            }
+
+            #header .top .right .logo img {
+                display: block;
+                margin: 7px 0 7px 0;
+            }
+            
+            #header .top .right .inputbox {
+                width: 600px;
+                height: 44px;
+                background: #f0f0f1;
+                border-radius: 8px;
+                margin-right: 20px;
+            }
+
+            #header .top .right .inputbox p {
+                padding: 13px 20px 13px;
+                margin: 0; 
+            }
+
+            #header .top .left .profile {
+                border: 1px solid #e0e0e2;
+                border-radius: 8px;
+            }
+
+            #header .top .left .profile ul {
+                padding: 11px 20px;
+            }
+
+            #header .top .left .profile ul .logindivider {
+                width: 1px;
+                height: 14px;
+                background: #0c0c0c;
+                margin:2px 4px;
+            }
+
+            #header .top .left .divider {
+                width: 1px;
+                height: 24px;
+                background: #e0e0e2;
+                margin: 8px 10px;
+            }
+
+            #header .top .left .shoppingcart ul {
+                padding: 13px 0;
+            }
+
+
+
+
+            /*============
+            bottom section
+            ============*/
+            /* #header .bottom {
+                background: #fff;
+            } */
 
         </style>
     </head>
@@ -41,36 +124,45 @@
         <div id="header">
 
             <div class="top">
-                <div class="container">
+                <div class="container overflow-hidden">
 
-                    <div class="logo">
-                        <img src="logo.svg" alt="Digikala logo">
+                    <div class="right float-right">
+
+                        <div class="logo float-right">
+                            <img src="logo.svg" alt="Digikala logo">
+                        </div>
+
+                        <div class="inputbox float-right">
+                            <p>جستجو</p>
+                        </div>
+
                     </div>
 
-                    <div class="input-box">
-                        <p>جستجو</p>
-                    </div>
+                    <div class="left overflow-hidden">
 
-                    <div class="profile">
-                        <div class="login">
-                            <ul>
+                        <div class="profile float-right">
+                            <ul class="overflow-hidden">
                                 <li><a href="#">ورود</a></li>
+                                <li class="logindivider"></li>
                                 <li><a href="#">ثبت‌نام</a></li>
                             </ul>
                         </div>
-                        <div class="divider"></div>
-                        <div class="shoppingcart">
+
+                        <div class="divider float-right"></div>
+
+                        <div class="shoppingcart float-right">
                             <ul>
                                 <li><a href="#">سبدخرید</a></li>
                             </ul>
                         </div>
+
                     </div>
 
                 </div>
             </div>
 
             
-            <div class="bottom">
+            <!-- <div class="bottom">
                 <div class="container">
 
                     <div class="menu">
@@ -91,8 +183,8 @@
                         </ul>
                     </div>
 
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
         </div>
 
     </body>
