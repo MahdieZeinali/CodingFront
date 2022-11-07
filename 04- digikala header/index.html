@@ -36,11 +36,14 @@
             }
 
             .container {
-                width: 1676;
                 margin: 0 auto;
             }
 
             .float-right {
+                float: right;
+            }
+
+            #header li {
                 float: right;
             }
 
@@ -51,22 +54,18 @@
 
             #header .top {
                 background: #fff;
-                padding: 12px 16px;
+                padding: 12px 28px;
             }
 
             #header .top .left {
                 float: left;
             }
 
-            #header .top li {
-                float: right;
-            }
-
             #header .top .right .logo img {
                 display: block;
                 margin: 7px 0 7px 0;
             }
-            
+
             #header .top .right .inputbox {
                 width: 600px;
                 height: 44px;
@@ -93,7 +92,7 @@
                 width: 1px;
                 height: 14px;
                 background: #0c0c0c;
-                margin:2px 4px;
+                margin:2px 6px;
             }
 
             #header .top .left .divider {
@@ -113,9 +112,36 @@
             /*============
             bottom section
             ============*/
-            /* #header .bottom {
-                background: #fff;
-            } */
+
+            #header .bottom {
+                background: rgb(255, 255, 255);
+                padding: 12px 28px;
+                color: #62666d;
+            }
+
+            #header .bottom .location a {
+                float: left;
+            }
+
+            #header .bottom .menu ul li a {
+                padding-left: 28px;
+            }
+
+            #header .bottom .menu ul li a.firstchild {
+                color: #424750;
+            }
+
+            #header .bottom .menu ul li.bottomdivider {
+                width: 1px;
+                height: 16px;
+                background: #c0c2c5;
+                margin-left: 12px;
+            }
+
+            #header .bottom .menu ul li a.shegeft {
+                padding-left: 12px;
+            }
+
 
         </style>
     </head>
@@ -162,29 +188,29 @@
             </div>
 
             
-            <!-- <div class="bottom">
-                <div class="container">
+            <div class="bottom">
+                <div class="container overflow-hidden">
 
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">دسته‌بندی کالاها</a></li>
+                    <div class="menu float-right">
+                        <ul class="overflow-hidden">
+                            <li><a href="#" class="firstchild">دسته‌بندی کالاها</a></li>
+                            <li class="bottomdivider"></li>
                             <li><a href="#">سوپرمارکت</a></li>
                             <li><a href="#">پرفروش‌ترین‌ها</a></li>
                             <li><a href="#">تخفیف‌ها و پیشنهادها</a></li>
-                            <li><a href="#">شگفت‌انگیزها</a></li>
+                            <li><a href="#" class="shegeft">شگفت‌انگیزها</a></li>
+                            <li class="bottomdivider"></li>
                             <li><a href="#">سوالی دارید؟</a></li>
                             <li><a href="#">دردیجی‌کالا بفروشید!</a></li>
                         </ul>
                     </div>
 
-                    <div class="location">
-                        <ul>
-                            <li><a href="#">لطفا شهر خود را انتخاب کنید</a></li>
-                        </ul>
+                    <div class="location overflow-hidden">
+                      <a href="#">لطفا شهر خود را انتخاب کنید</a>
                     </div>
 
-                </div> -->
-            <!-- </div> -->
+                </div>
+            </div>
         </div>
 
     </body>
