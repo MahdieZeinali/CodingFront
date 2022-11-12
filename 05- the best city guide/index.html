@@ -43,6 +43,24 @@
 
 
 
+
+        /*==========
+        mix section
+        ==========*/
+
+        #hero h1 ,
+        #content .boxonimage h4 {
+           margin: 10px 0 0 0; 
+        }
+
+        #hero p ,
+        #content .boxonimage p {
+            margin: 2px 0 0 0;
+        }
+
+
+
+
         /*==========
         header section
         ==========*/
@@ -97,14 +115,6 @@
             width: 120px;
         }
 
-        #hero h1 {
-           margin: 10px 0 0 0; 
-        }
-
-        #hero p {
-            margin: 2px 0 0 0;
-        }
-
 
 
 
@@ -133,9 +143,30 @@
             color: #27aba0;
         }
 
+        #content .image {
+            background: red;
+            z-index: 100;
+            width: 307.91px;
+            height: 205.28px;
+            position: relative;
+        }
+
+        #content .boxonimage {
+            width: 100%;
+            height: 40%;
+            position: absolute;
+            bottom: 0;
+            background-color: #1a4374;
+            color: #fff;
+            opacity: 85%;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+            text-align: center;
+        }
 
 
 
+        
         /*==========
         footer section
         ==========*/
@@ -185,7 +216,13 @@
             <div class="item">
                 <div class="holder">
                     <h3>غذای عالی</h3>
-                    <img src="img/food.svg" alt=" قهوه، چای، دونات و بستنی">
+                    <div class="image">
+                        <div class="boxonimage">
+                            <h4>غذاهای خوشمزه و خوب و عالی</h4>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                        </div>
+                        <img src="img/food.svg" alt=" قهوه، چای، دونات و بستنی">
+                    </div>
                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.</p>
                 </div>
             </div>
