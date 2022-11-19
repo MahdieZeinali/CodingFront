@@ -1,0 +1,180 @@
+/*==========
+first step
+==========*/
+
+body {
+     margin: 0;
+    line-height: 1.6;
+    color: #3a3a3a;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+*, *:before , *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+
+
+/*==========
+all sections
+==========*/
+
+.container {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+        
+/*==========
+header section
+==========*/
+
+#header {
+    padding: 20px 0;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+}
+
+#header a {
+    color: #3acec2;
+    padding-left: 40px;
+}
+
+#header a:hover {
+    color: #074160;
+}
+
+#header .container .logo {
+    float: left;
+    color: #074160;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+#header .container .menu {
+    float: right;
+    padding-right: 15px;
+}
+
+#header .container .menu ul li{
+    float: left;
+}
+
+
+
+
+/*==========
+hero section
+==========*/
+
+#hero {
+    background: #3acec2;
+    text-align: center;
+    color: #fff;
+    padding: 32px 0;
+    padding-top: 105px;
+}
+
+#hero img {
+    width: 120px;
+}
+
+#hero h1 {
+    margin: 10px 0 0 0; 
+}
+
+#hero p {
+    margin: 2px 0 0 0;
+}
+
+
+
+
+/*==========
+content section
+==========*/
+
+#content {
+    margin: 50px 0;
+}
+
+#content .item {
+    float: left;
+    width: 33%;
+    padding:0 15px;
+}
+
+#content h3 {
+    font-weight: bold;
+}
+
+#content b {
+    color: #27aba0;
+}
+
+#content .image {
+    background: red;
+    z-index: 100;
+    width: 349.5px;
+    height: 233px;
+    position: relative;
+}
+
+#content .boxonimage {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(26, 67, 116, 0.9);
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    line-height: 1.1;
+}
+
+#content .boxonimage h4 {
+    margin: 10px 0 0 0; 
+    text-align: center;
+}
+
+#content .boxonimage p {
+    margin: 8px 12px 0 12px;
+    text-align: left;
+}
+
+
+
+        
+/*==========
+footer section
+==========*/
+
+#footer {
+    background: #d9e4e9;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+}
