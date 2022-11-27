@@ -1,0 +1,226 @@
+/*==========
+ first step
+==========*/
+body {
+    direction: rtl;
+    margin: 0;
+    color: #3a3a3a;
+    font-family: 'Vazirmatn';
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+*, *:before , *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+  
+
+
+
+/*==========
+all sections
+==========*/
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+
+/*==========
+header section
+==========*/
+#header {
+    padding: 20px 0;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 100;
+}
+#header .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header .header-flex .logo {
+    color: #074160;
+    font-weight: bold;
+    font-size: 18px;
+}
+#header .header-flex .menu ul {
+    display: flex;
+}
+#header .header-flex .menu ul li a {
+    color: #3acec2;
+    padding-right: 40px;
+}
+#header .header-flex .menu ul li a:hover {
+    color: #074160;
+}
+
+
+/*==========
+hero section
+==========*/
+#hero {
+    background: #3acec2;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 35px;
+    padding-top: 105px;
+}
+#hero img {
+    width: 120px;
+}
+#hero h1 {
+    margin: 10px 0 0 0; 
+    font-weight: 900;
+}
+#hero p {
+    margin: 2px 0 0 0;
+}
+
+
+
+
+/*==========
+content section
+==========*/
+#content {
+    margin: 50px 0;
+}
+#content .items-flex {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#content .items-flex .item {
+    width: calc(100%/3 - 20px);
+}
+#content h3 {
+    font-weight: 700;
+}
+#content b {
+    color: #27aba0;
+}
+#content .items-flex .item .image {
+    width: 100%;
+    position: relative;
+}
+#content .items-flex .item .image .boxonimage {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(26, 67, 116, 0.8);
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    line-height: 1.1;
+}
+#content .items-flex .item .image img {
+    display: block;
+}
+#content .items-flex .item .image .boxonimage h4 {
+    margin: 10px 0 0 0; 
+    text-align: center;
+    font-weight: 300;   
+}
+#content .items-flex .item .image .boxonimage p {
+    margin: 8px 12px;
+    font-weight: 300;
+}
+
+
+  
+
+/*==========
+footer section
+==========*/
+#footer {
+    background: #d9e4e9;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+
+/*==========
+Media Queries
+==========*/
+@media only screen and (max-width:1150px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width:960px) {
+    #content .items-flex .item {
+        width: calc(50% - 15px);
+    }
+    #content .items-flex .item:nth-child(3) {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #header {
+        padding: 10px 0;
+    }
+    #header .header-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    #header .header-flex .logo,
+    #header .container .menu {
+        padding: 0;
+    }
+    #header .header-flex .menu ul li a {
+        padding:0 20px;
+    }
+    #content .items-flex .item {
+        width: 100%;
+    }
+}
