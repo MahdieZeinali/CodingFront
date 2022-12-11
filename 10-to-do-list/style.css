@@ -1,0 +1,91 @@
+body {
+    background: #e8e8e8;
+    font-family: 'Roboto', sans-serif;
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+    -ms-box-sixing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.container {
+    max-width: 620px;
+    margin: 0px auto;
+    padding:30px;
+}
+#todolist .top {
+    text-align: center;
+}
+#todolist .top h1 {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#todolist .top p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#todolist .top .task-input{
+    width: 75%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px #b9b9b9;
+}
+#todolist .top .add-btn{
+    width: 24%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background: #a13939;
+    color: white;
+    box-shadow: 1px 2px 3px #b9b9b9;
+}
+#todolist .top .add-btn:hover,
+#todolist .top .add-btn:focus {
+    background: #722727;
+}
+#todolist ul.task-list {
+    margin-top: 20px;
+}
+#todolist ul.task-list li {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #a4a4a4;
+    position: relative;
+    cursor: pointer;
+}
+#todolist ul.task-list li button {
+    background: #a13939;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+#todolist ul.task-list li button.delete {
+    position: absolute;
+    right: 0;
+}
+#todolist ul.task-list li.change-style {
+    text-decoration: line-through;
+    color: grey;
+}
+#todolist ul.task-list li.change-style button{
+    background: gray;
+}
+
+@media only screen and (max-width:470px){
+    #todolist .top .add-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #todolist .top .task-input {
+        width: 100%;
+    }
+}

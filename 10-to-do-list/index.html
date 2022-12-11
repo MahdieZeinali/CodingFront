@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="todolist">  
+        <div class="container">
+            <div class="top">
+                <h1>To Do list</h1>
+                <p>You Don't Have Time to Procrastinate! Do Your List :)</p>
+                <input type="text" placeholder="Add New ToDo" autocomplete="off" class="task-input" id="task-input">
+                <button id="add-btn" class="add-btn">Add Task</button>
+            </div>
+            <ul id="task-list" class="task-list"></ul>
+        </div>
+    </div> 
+</body>
+<script>
+    var inputElement = document.getElementById("task-input");
+
+    inputElement.addEventListener("keypress", onEnter);
+    function onEnter(event) {
+        if(event.key === "Enter"){
+            addTask()
+        }
+    }
+    function addTask(){
+        var ulElement = document.getElementById("task-list");
+        var liElement = document.createElement("li");
+        var delbtn = document.createElement("button");
+        
+        if(inputElement.value.length > 2){
+            liElement.innerHTML = inputElement.value;
+            ulElement.appendChild(liElement);
+            inputElement.value = "";
+
+            delbtn.innerHTML = "x";
+            delbtn.classList.add("delete");
+            liElement.append(delbtn);
+
+            function deleteTask(){
+                liElement.remove();
+            }
+            delbtn.addEventListener("click", deleteTask);
+
+            function doneTask(){
+                liElement.classList.toggle("change-style")
+            }
+            liElement.addEventListener("click", doneTask);
+        } else {
+            alert("please enter at least 3 characters");
+        }
+    }
+    var addBtn = document.getElementById("add-btn");
+    addBtn.addEventListener("click", addTask);
+
+</script>
+</html>
