@@ -46,9 +46,16 @@
         taskItemStyle.opacity = "0"
 
         taskList.appendChild(taskItems);
-        setTimeout(function(){
-          taskItemStyle.animation = "fade-in 0.3s ease-out forwards"
-        }, 300)
+        // setTimeout(function(){
+        //   taskItemStyle.animation = "fade-in 0.3s ease-out forwards"
+        // }, 300)
+        taskItemStyle.animation = "fade-in 0.3s ease-out forwards"
+          
+          // اگه اونforwards رو نمیذاشتیم به این خط پایینیا احتیاج پیدا می‌کردیم.
+        // taskItems.addEventListener("animationend", fadeIn)
+        // function fadeIn(){
+        //   taskItemStyle.opacity = "1"
+        // }
 
         var delBtnStyle = delBtn.style;
         delBtnStyle.background = "#FFECEC";
@@ -65,10 +72,16 @@
 
         delBtn.addEventListener("click", delTask);
         function delTask() {
+          // taskItemStyle.animation = "fade-out 0.3s ease-in"
+          // setTimeout(function(){
+          //   taskItems.remove();
+          // }, 300) 
+          
           taskItemStyle.animation = "fade-out 0.3s ease-in"
-          setTimeout(function(){
+          taskItems.addEventListener("animationend", dlt)
+          function dlt(){
             taskItems.remove();
-          }, 300) 
+          }  
         }
         function Done() {
             taskItems.classList.toggle("done");
