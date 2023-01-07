@@ -37,13 +37,19 @@
         inputElement.value = "";
         var delBtn = document.createElement("button");
         delBtn.innerHTML = "Delete";
+
         var taskItemStyle = taskItems.style;
-        taskItemStyle.opacity = "0"
-        taskItemStyle.transition = "all 2s"
         taskItemStyle.border = "1px solid #5c5cff"
         taskItemStyle.padding = "8px 12px"
         taskItemStyle.marginRight = "12px"
         taskItemStyle.borderRadius = "6px"
+        taskItemStyle.opacity = "0"
+
+        taskList.appendChild(taskItems);
+        setTimeout(function(){
+          taskItemStyle.animation = "fade-in 0.3s ease-out forwards"
+        }, 300)
+
         var delBtnStyle = delBtn.style;
         delBtnStyle.background = "#FFECEC";
         delBtnStyle.border = "none";
@@ -54,12 +60,15 @@
         delBtnStyle.fontFamily = "Roboto";
         delBtnStyle.fontWeight = "400";
         delBtnStyle.fontSize = "14px";
+
         taskItems.appendChild(delBtn);
-        taskList.appendChild(taskItems);
-        taskItemStyle.opacity = "1";
+
         delBtn.addEventListener("click", delTask);
         function delTask() {
+          taskItemStyle.animation = "fade-out 0.3s ease-in"
+          setTimeout(function(){
             taskItems.remove();
+          }, 300) 
         }
         function Done() {
             taskItems.classList.toggle("done");
